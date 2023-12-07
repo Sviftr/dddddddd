@@ -1,0 +1,227 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+.video__bg {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.effect__body {
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    object-fit: cover;
+    position: absolute;
+    z-index: -50;
+    background-color: #000000a0;
+}
+
+.video__bg video {
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+    z-index: -100;
+}
+
+/* HEADER */
+
+.header {
+    width: 575px;
+    padding: 20px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fa-map-location-dot {
+    padding: 9px 10px 9px 0;
+    color: #fff;
+    font-size: 20px;
+    text-shadow: 0.3px 0.3px 5px #0000005a;
+}
+
+.header__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.logo__text {
+    color: #fff;
+    font-size: 19px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+}
+
+.logo__text a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.nav__bar {
+    
+}
+
+.nav__bar-ul {
+    display: flex;
+}
+
+.nav__bar-item {
+    margin:  0 50px 0 50px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'IBM Plex Mono', monospace;
+    text-transform: uppercase;
+    cursor: pointer;
+    position: relative;
+}
+
+.nav__bar-item:nth-child(2) {
+    margin:  0 20px 0 50px;
+}
+
+.nav__bar-item a{
+    text-decoration: none;
+    color: #fff;
+}
+
+
+.nav__bar-item::after {
+    content: '';
+    position: absolute;
+    bottom: -1.9px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #545454;
+    transition: 0.9s;
+    transform: scaleX(0);
+}
+
+
+.nav__bar-item:hover:after {
+    transform: scaleZ(1);
+}
+
+/* MAIN */
+
+.main {
+    margin: 60px auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.main__text {
+    font-size: 120px;
+    color: #fff;
+    text-shadow: 0.5px 0.5px 4px #00000085;
+    font-family: 'Inter', sans-serif;
+    position: relative;
+}
+
+/* BUTTON */
+
+.button__go{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.link__go{
+    width: 250px;
+    margin:60px 0 0 0;
+    position: relative;
+}
+
+.holer__link{
+    font-family: 'Inter', sans-serif;
+    display: block;
+    width: 250px;
+    height: 50px;
+    line-height: 50px;
+    font-weight: bold;
+    text-decoration: none;
+    background: #0000006f;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 3px solid #000000c0;
+    transition: all .35s;
+}
+
+.icon{
+    width: 50px;
+    height: 50px;
+    border: 3px solid transparent;
+    position: absolute;
+    transform: rotate(45deg);
+    right: 0;
+    top: 0;
+    z-index: -1;
+    transition: all .35s;
+}
+
+.icon svg{
+    width: 30px;
+    position: absolute;
+    top: calc(50% - 15px);
+    left: calc(50% - 15px);
+    transform: rotate(-45deg);
+    fill: #2ecc71;
+    transition: all .35s;
+}
+
+.holer__link:hover{
+    width: 200px;
+    border: 3px solid #2ecc71;
+    background: transparent;
+    color: #2ecc71;
+}
+
+.holer__link:hover + .icon{
+    border: 3px solid #2ecc71;
+    right: -25%;
+}
+
+
+
+    @media (max-width: 575px) {
+
+
+        .video__bg {
+            background: url(./IMG/pexels-eberhard-grossgasteiger-1624496.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+        }
+
+        .main__text {
+            font-size: 75px;
+        }
+
+        .nav__bar-ul {
+            margin: 0 0 0 100px;
+            padding: 0 0 0 0;
+        }
+    }
